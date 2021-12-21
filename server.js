@@ -1,6 +1,6 @@
 const express = require('express');
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 //Examine routes folder
@@ -15,6 +15,6 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.listen(PORT, () => {
-  console.log(`🌍 API server now on port ${PORT}!`);
-});
+app.listen(PORT, function() {
+  console.log(`🌍 Now listening on PORT ${PORT}`);
+})
