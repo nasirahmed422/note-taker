@@ -15,6 +15,10 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.listen(process.env.PORT || 3001, () => {
+/* app.listen(process.env.PORT || 3001, () => {
   console.log(`API server now on port ${PORT}!`);
+}); */
+
+app.listen(process.env.PORT || 3001, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
