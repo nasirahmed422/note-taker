@@ -1,4 +1,4 @@
-const uuidv1 = require("uuid/v1");
+const uuidv1 = require("uuidv1");
 const fs = require("fs");
 const util = require("util");
 
